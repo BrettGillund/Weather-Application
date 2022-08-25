@@ -1,5 +1,5 @@
 const apiurl = 'https://api.openweathermap.org';
-const apiKey = '326b659a2cca0981840dd48e0759dd9a';
+const apiKey = '2ac394ef97cc276f641aa44871202faf';
 const searchFromEl = document.getElementById('search-form');
 const textFormEl = document.getElementById('search-text');
 const submitSearchEl = document.querySelector('input[type="submit"]');
@@ -85,7 +85,7 @@ function fetchCurrentWeather(userLocation) {
         res.json()
     )).then((data) => (
         
-        renderWeather(data)
+        renderWeather(data),
 
         // console.log(typeof data),
         searchedCity.insertAdjacentText('beforeend', `${data.name}`),
@@ -96,25 +96,25 @@ function fetchCurrentWeather(userLocation) {
 
         previousSelection.insertAdjacentHTML('beforeend', `<li class="collection-item"><div>${data.name}<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>`),
 
-        // dayOneImg.insertAdjacentHTML('beforeend', `<img src=${data}></img>`),
-        // dayOneTemp.insertAdjacentHTML('beforeend', `<p>Temp: ${data}</p>`),
-        // dayOneWindSpd.insertAdjacentHTML('beforeend', `<p>Wind Speed: ${data}</p>`),
-        // dayOneHumid.insertAdjacentHTML('beforeend', `<p>Humidity: ${data}</p>`),
+        dayOneImg.insertAdjacentHTML('beforeend', `<img src=${data}></img>`),
+        dayOneTemp.insertAdjacentHTML('beforeend', `<p>Temp: ${data}</p>`),
+        dayOneWindSpd.insertAdjacentHTML('beforeend', `<p>Wind Speed: ${data}</p>`),
+        dayOneHumid.insertAdjacentHTML('beforeend', `<p>Humidity: ${data}</p>`),
 
-        // dayTwoImg.insertAdjacentHTML('beforeend', `<img src=${data}></img>`),
-        // dayTwoTemp.insertAdjacentHTML('beforeend', `<p>Temp: ${data}</p>`),
-        // dayTwoWindSpd.insertAdjacentHTML('beforeend', `<p>Wind Speed: ${data}</p>`),
-        // dayTwoHumid.insertAdjacentHTML('beforeend', `<p>Humidity: ${data}</p>`),
+        dayTwoImg.insertAdjacentHTML('beforeend', `<img src=${data}></img>`),
+        dayTwoTemp.insertAdjacentHTML('beforeend', `<p>Temp: ${data}</p>`),
+        dayTwoWindSpd.insertAdjacentHTML('beforeend', `<p>Wind Speed: ${data}</p>`),
+        dayTwoHumid.insertAdjacentHTML('beforeend', `<p>Humidity: ${data}</p>`),
 
-        // dayThreeImg.insertAdjacentHTML('beforeend', `<img src=${data}></img>`),
-        // dayThreeTemp.insertAdjacentHTML('beforeend', `<p>Temp: ${data}</p>`),
-        // dayThreeWindSpd.insertAdjacentHTML('beforeend', `<p>Wind Speed: ${data}</p>`),
-        // dayThreeHumid.insertAdjacentHTML('beforeend', `<p>Humidity: ${data}</p>`),
+        dayThreeImg.insertAdjacentHTML('beforeend', `<img src=${data}></img>`),
+        dayThreeTemp.insertAdjacentHTML('beforeend', `<p>Temp: ${data}</p>`),
+        dayThreeWindSpd.insertAdjacentHTML('beforeend', `<p>Wind Speed: ${data}</p>`),
+        dayThreeHumid.insertAdjacentHTML('beforeend', `<p>Humidity: ${data}</p>`),
 
-        // dayFourImg.insertAdjacentHTML('beforeend', `<img src=${data}></img>`),
-        // dayFourTemp.insertAdjacentHTML('beforeend', `<p>Temp: ${data}</p>`),
-        // dayFourWindSpd.insertAdjacentHTML('beforeend', `<p>Wind Speed: ${data}</p>`),
-        // dayFourHumid.insertAdjacentHTML('beforeend', `<p>Humidity: ${data}</p>`)
+        dayFourImg.insertAdjacentHTML('beforeend', `<img src=${data}></img>`),
+        dayFourTemp.insertAdjacentHTML('beforeend', `<p>Temp: ${data}</p>`),
+        dayFourWindSpd.insertAdjacentHTML('beforeend', `<p>Wind Speed: ${data}</p>`),
+        dayFourHumid.insertAdjacentHTML('beforeend', `<p>Humidity: ${data}</p>`)
 
 
 
